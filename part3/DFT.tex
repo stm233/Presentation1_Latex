@@ -1,0 +1,15 @@
+\frame{
+\frametitle{Discrete Fourier Transform}%此页的标题
+
+\qquad The discrete Fourier transform transforms a sequence of N numbers $x_{0},x_{1},\ldots ,x_{N-1}$ into another sequence of complex numbers, $X_{0},X_{1},\ldots ,X_{N-1}$ ,which is defined by
+\begin{eqnarray}
+	% a_{5} &=& f\left( W_{51}\cdot X_{1}+W_{52}\cdot X_{2}+W_{53}\cdot X_{3}+W_{54}\cdot X_{4}\right)\\
+	X_{k} &=& \sum ^{N-1}_{n=0}x_{n}\cdot e^{-i 2\pi k\dfrac {n}{N}}\\
+	      &=& \sum ^{N-1}_{n=0}x_{n}\left[ \cos \left( 2\pi k\dfrac {n}{N}\right) -i\cdot \sin \left( 2\pi k\dfrac {n}{N}\right) \right] 
+\end{eqnarray}
+
+\qquad where the last expression follows from the first one by Euler's formula.
+
+\qquad The transform is sometimes denoted by the symbol $\mathcal {F}$, as in $\mathbf {X} = \mathcal {F}\left\{\mathbf {x} \right\}$or $\mathcal {F}\left(\mathbf {x} \right)$ or $\mathcal {F}\mathbf {x}$.
+
+}

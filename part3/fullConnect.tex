@@ -1,0 +1,24 @@
+
+\frame{
+\frametitle{Full Connect Layers}%此页的标题
+
+\begin{center}
+	\begin{neuralnetwork}[height=4]
+		\newcommand{\nodetextclear}[2]{$a_#2$}
+		\newcommand{\nodetextx}[2]{$x_#2$}
+		\newcommand{\nodetexty}[2]{}
+		\inputlayer[count=4, bias=false, title=Layer L, text=\nodetextx]
+		\hiddenlayer[count=5, bias=false, title=Layer L+1, text=\nodetextclear] \linklayers
+		\outputlayer[count=4, title=Layer L+2, text=\nodetexty] \linklayers
+	\end{neuralnetwork}
+\end{center}
+
+\begin{eqnarray}
+	% a_{5} &=& f\left( W_{51}\cdot X_{1}+W_{52}\cdot X_{2}+W_{53}\cdot X_{3}+W_{54}\cdot X_{4}\right)\\
+	a_{1} &=& f\left( W_{11}\cdot X_{1}+W_{12}\cdot X_{2}+W_{13}\cdot X_{3}+W_{14}\cdot X_{4}\right)\\
+	a_{5} &=& f\left( W_{51}\cdot X_{1}+W_{52}\cdot X_{2}+W_{53}\cdot X_{3}+W_{54}\cdot X_{4}\right)
+\end{eqnarray}
+
+}
+
+

@@ -1,0 +1,93 @@
+\documentclass{beamer}
+
+\usepackage{neuralnetwork}
+\usepackage{anyfontsize}
+\usepackage{pgfpages}
+
+\usepackage{ragged2e} %文本两端对齐 \justifying
+% \usepackage{tikz}
+%\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
+
+\setcounter{tocdepth}{2} % hide subsubsection in tableofcontents
+\usetheme[hideothersubsections,numbers,sidebarshades]{Radboud}
+
+% no indenting
+\setlength{\parindent}{0pt}
+
+% frame style
+\AtBeginSection[]{
+    \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+    \end{frame}
+}
+
+% beamer settings
+\setbeamertemplate{footline}{}
+\setbeamertemplate{sidebar left}[sidebar theme]
+\setbeamercovered{transparent}
+%\setbeameroption{show notes on second screen=right}
+%\setbeamerfont{note page}{size=\tiny}
+%\setbeameroption{show notes}
+%\setbeameroption{show only notes}
+\setbeameroption{hide notes}
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{subitemize item}[-]
+
+\setbeamercovered{dynamic}
+\setbeamerfont{author}{family=\rmfamily}
+
+
+
+\begin{document}
+
+    \title{\emph{The Report about CirCNN }}%题目
+    \author[by Tianma Shen]{authors: Tianma Shen\\[5pt]\scriptsize{University of Shanghai for Science and Technology}}%作者
+    % \date{}
+    % disable sidebar content
+    \setbeamertemplate{sidebar left}{}
+
+    \begin{frame}
+        \titlepage
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Outline}%修改Outline的名字，一般不会动这个
+        \tableofcontents
+    \end{frame}
+
+    
+    % enable sidebar content
+    \setbeamertemplate{sidebar left}[sidebar theme]
+
+    \section{Background and Motivation}
+
+    % ===== insert sections here =====
+
+    \input{part1/Background.tex}
+    \input{part1/Motivation}
+    %\input{...}
+
+    % ================================
+    \section{Novelty of CirCNN}
+
+    \input{part2/Novelty}
+
+    \section{Related Knowledge}
+
+    \input{part3/fullConnect}
+    \input{part3/convolution}
+    \input{part3/CirculantMatrices}
+    \input{part3/DFT}
+    \input{part3/ConvolutionTheorem}
+
+    \section{CirCNN Algorithms}
+
+    \input{part4/forward}
+    \input{part4/block}
+    \input{part4/result}
+
+
+\end{document}
+
